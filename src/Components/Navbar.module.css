@@ -1,0 +1,85 @@
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: #ebf0fa;
+  box-shadow: 0px 4px 6px 0px rgba(16, 37, 85, 0.15);
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoText {
+  display: none;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.navMenu {
+  position: relative;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 913px) {
+  .header {
+    padding: 0.6rem 1rem;
+  }
+  .navMenu {
+    z-index: 10;
+    position: fixed;
+    background: #ebf0fa;
+    top: 0;
+    right: -1000%;
+    width: 70%;
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    transition: 0.4s;
+  }
+}
+
+.navMenu.showMenu {
+  transition: 0.4s;
+
+  right: 0;
+}
+
+@media screen and (min-width: 913px) {
+  .header {
+    padding: 0.6rem 0;
+  }
+  .closeBtn {
+    display: none;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .logoText {
+    display: block;
+  }
+
+  .navMenu {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #0d2c7b;
+    font-weight: 450;
+  }
+}

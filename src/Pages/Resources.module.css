@@ -1,0 +1,10 @@
+.resourceSection {
+  padding-top: 5rem;
+}
+
+.resourceContainer {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+}
