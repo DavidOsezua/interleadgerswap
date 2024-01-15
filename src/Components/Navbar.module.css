@@ -4,6 +4,7 @@
   top: 0;
   background: #ebf0fa;
   box-shadow: 0px 4px 6px 0px rgba(16, 37, 85, 0.15);
+  z-index: 900;
 }
 
 .logoSection {
@@ -78,8 +79,12 @@
   .navMenu {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+   
     color: #0d2c7b;
     font-weight: 450;
+  }
+
+  .navMenu > *+*{
+margin-left: 2rem;
   }
 }

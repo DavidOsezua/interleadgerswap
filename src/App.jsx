@@ -4,6 +4,7 @@ import { Navbar, Footer, Navbar2 } from "./Components";
 import Home from "./Pages/Home";
 import Resources from "./Pages/Resources";
 import AboutUs from "./Pages/AboutUs";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 const App = () => {
   return (

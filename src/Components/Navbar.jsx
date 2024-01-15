@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import NavLinks from "./NavLinks";
+import { NavLink } from "react-router-dom";
 import { logo, toggle } from "../assests";
 import Button from "./Button";
 
@@ -14,7 +15,9 @@ const Navbar = () => {
     <header className={`${styles.header}`}>
       <nav className={`${styles.navContainer}`}>
         <div className={styles.logoSection}>
-          <img src={logo} />
+          <NavLink to="/">
+            <img src={logo} />
+          </NavLink>
           <h2 className={`${styles.logoText} text-[#6450E0] font-bold`}>
             INTERLEDGERSWAP
           </h2>
@@ -30,7 +33,7 @@ const Navbar = () => {
         </ul>
 
         <div className={styles.toggleBtn}>
-          <Button />
+          <Button>Start Now</Button>
           <div className={styles.toggle}>
             <img src={toggle} onClick={toggleHandler} />
           </div>
