@@ -17,7 +17,7 @@ const SectionComponent = ({
 }) => {
   return (
     <div className={styles.split}>
-      <div className={`${imageSide ? styles.imageSide : ""}`}>
+      <div className={`${imageSide ? styles.imageSide : ""} ${styles.image}`}>
         <img src={image} />
       </div>
 

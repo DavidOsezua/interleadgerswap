@@ -106,7 +106,7 @@
 .circleSmallMobile {
   position: absolute;
   top: 200px;
-  right: 0;
+  right: 0px;
 }
 
 .circleBigDesktop,
@@ -116,7 +116,7 @@
 
 .patnerContainer {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   background: var(
     --grd3,
     linear-gradient(179deg, rgba(118, 82, 183, 0.76) -74.8%, #7983dc 99.3%)
@@ -258,7 +258,7 @@
   align-items: center;
 }
 
-ctaSection {
+.ctaSection {
   background: #e6eaf1;
   padding-top: 5rem;
   padding-bottom: 3rem;
@@ -302,6 +302,17 @@ ctaSection {
 .titleContainer > * + * {
   margin-top: 1rem;
 }
+
+.partnerImagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 918px) {
   .homeSection {
     padding-top: 10rem;
@@ -452,7 +463,7 @@ ctaSection {
     text-align: left;
   }
 
-  .ctaBtn{
+  .ctaBtn {
     margin-left: 0;
     margin-right: 0;
   }

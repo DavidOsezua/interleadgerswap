@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
+
 import {
   Rectangle,
   arrow,
@@ -18,7 +19,8 @@ import {
   comImg,
 } from "../assests";
 import Button from "../Components/Button";
-import { SectionComponent } from "../Components";
+import { FormComponent, SectionComponent } from "../Components";
+import { patnerImages } from "../data/data";
 
 const Home = () => {
   return (
@@ -41,9 +43,13 @@ const Home = () => {
 
         <div className={styles.patnerContainer}>
           <div>
-            <h3>Our Patners</h3>
+            <h3 className="text-center text-[#fff] mb-[0.3rem]">Our Patners</h3>
 
-            <div></div>
+            <div className={styles.partnerImagesContainer}>
+              {patnerImages.map((partnerImage) => (
+                <img src={partnerImage} className={styles.parnerImage} />
+              ))}
+            </div>
           </div>
         </div>
         <div className={`${styles.homeContainer}`}>
@@ -93,7 +99,7 @@ const Home = () => {
             protection of decentralized technology!
           </p>
 
-          <div>FORM</div>
+          <FormComponent />
         </div>
       </section>
 

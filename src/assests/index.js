@@ -24,6 +24,11 @@ import footerLidn from "./footerLidn.svg";
 import footerx from "./footerx.svg";
 import footerDis from "./footerDis.svg";
 import ComImg3 from "./ComImg3.png";
+import cointMarketCap from "./cointMarketCap.svg";
+import coingeko from "./coingeko.svg";
+import coinPedia from "./coinPedia.svg";
+import binance from "./binance.svg";
+import pancakeSwap from "./pancakeSwap.svg";
 
 export {
   logo,
@@ -52,4 +57,9 @@ export {
   footerx,
   footerTel,
   footerLidn,
+  pancakeSwap,
+  coinPedia,
+  coingeko,
+  cointMarketCap,
+  binance,
 };

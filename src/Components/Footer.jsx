@@ -6,7 +6,7 @@ import { footerSocials } from "../data/data";
 import { logo } from "../assests";
 const Footer = () => {
   return (
-    <footer className="pt-[5rem]">
+    <footer className="pt-[5rem] bg-[#E6EAF1] px-[0.5rem]">
       <div className={`${styles.navContainer}`}>
         <div className={styles.logoSection}>
           <img src={logo} />

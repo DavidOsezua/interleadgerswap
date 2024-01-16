@@ -7,6 +7,11 @@ import {
   footerDis,
   footerx,
   footerTel,
+  pancakeSwap,
+  binance,
+  coingeko,
+  coinPedia,
+  cointMarketCap,
 } from "../assests";
 
 export const navLinks = [
@@ -197,3 +202,5 @@ export const footerSocials = [
   { image: footerTel },
   { image: footerDis },
 ];
+
+export const patnerImages = [pancakeSwap,binance,coingeko,coinPedia,cointMarketCap];
