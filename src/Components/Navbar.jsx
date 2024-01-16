@@ -25,11 +25,14 @@ const Navbar = () => {
 
         <ul
           className={`${styles.navMenu} ${toggleButton ? styles.showMenu : ""}`}
+          onClick={toggleHandler}
         >
-          <NavLinks />
-          <button onClick={toggleHandler} className={styles.closeBtn}>
-            button
-          </button>
+          <NavLinks onClose={toggleHandler} />
+          <div>
+            <button className={styles.closeBtn}>
+              Close
+            </button>
+          </div>
         </ul>
 
         <div className={styles.toggleBtn}>

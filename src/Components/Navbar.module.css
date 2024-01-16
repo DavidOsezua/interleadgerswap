@@ -29,10 +29,12 @@
   position: relative;
 }
 
+
 .toggleBtn {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 913px) {
@@ -50,7 +52,15 @@
     height: 100%;
     padding-top: 5rem;
     padding-left: 2rem;
-    transition: 0.4s;
+    transition: 1s;
+  }
+
+  .closeBtn {
+    position: absolute;
+    font: bold;
+    background-color: #0d2c7b;
+    color: #fff;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -79,12 +89,12 @@
   .navMenu {
     display: flex;
     align-items: center;
-   
+
     color: #0d2c7b;
     font-weight: 450;
   }
 
-  .navMenu > *+*{
-margin-left: 2rem;
+  .navMenu > * + * {
+    margin-left: 2rem;
   }
 }

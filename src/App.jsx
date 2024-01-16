@@ -5,12 +5,13 @@ import Home from "./Pages/Home";
 import Resources from "./Pages/Resources";
 import AboutUs from "./Pages/AboutUs";
 import { SkeletonTheme } from "react-loading-skeleton";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-        {/* <ScrollToTop/> */}
+        <ScrollToTop />
         <Navbar2 />
         <Navbar />
         <Routes>
