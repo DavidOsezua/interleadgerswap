@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { arrow } from "../assests";
 import styles from "./SectionComponent.module.css";
+import { Slide, Fade } from "react-awesome-reveal";
 
 const SectionComponent = ({
   image,
@@ -18,7 +19,9 @@ const SectionComponent = ({
   return (
     <div className={styles.split}>
       <div className={`${imageSide ? styles.imageSide : ""} ${styles.image}`}>
-        <img src={image} />
+        <Fade delay={1000}>
+          <img src={image} />
+        </Fade>
       </div>
 
       <div
@@ -27,25 +30,38 @@ const SectionComponent = ({
         } `}
       >
         <div className={``}>
-          <h1 className={styles.heading}>{heading1} </h1>
-          <p className={styles.text}>{text1}</p>
+          <Slide  direction="down">
+            <h1 className={styles.heading}>{heading1} </h1>
+          </Slide>
+          <Fade delay={300}>
+            <p className={styles.text}>{text1}</p>
+          </Fade>
         </div>
 
         <div>
-          <h1 className={styles.heading}>{heading2}</h1>
-          <p className={styles.text}>{text2}</p>
+          <Slide direction="down">
+            <h1 className={styles.heading}>{heading2} </h1>
+          </Slide>
+          <Fade delay={300}>
+            <p className={styles.text}>{text2}</p>
+          </Fade>
         </div>
 
         <div>
-          <h1 className={styles.heading}>{heading3}</h1>
-          <p className={styles.text}>{text3}</p>
+          <Slide direction="down">
+            <h1 className={styles.heading}>{heading3} </h1>
+          </Slide>
+          <Fade delay={300}>
+            <p className={styles.text}>{text3}</p>
+          </Fade>
         </div>
 
         <div>{images}</div>
-
-        <Button>
-          <img src={arrow} /> Start Now
-        </Button>
+        <Slide delay={500} direction="up">
+          <Button>
+            <img src={arrow} /> Start Now
+          </Button>
+        </Slide>
       </div>
     </div>
   );

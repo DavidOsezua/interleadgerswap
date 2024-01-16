@@ -21,83 +21,106 @@ import {
 import Button from "../Components/Button";
 import { FormComponent, SectionComponent } from "../Components";
 import { patnerImages } from "../data/data";
+import { Slide, Fade, Bounce } from "react-awesome-reveal";
 
 const Home = () => {
   return (
     <>
       <section className={`${styles.homeSection}`}>
-        <div className={styles.circleBigMobile}>
-          <img src={circleBig} />
-        </div>
+        <Fade delay={1000}>
+          <div className={styles.circleBigMobile}>
+            <img src={circleBig} />
+          </div>
+        </Fade>
 
-        <div className={styles.circleSmallMobile}>
-          <img src={circleSmall} />
-        </div>
-        <div className={styles.circleBigDesktop}>
-          <img src={circleBigDesktop} />
-        </div>
+        <Fade delay={1500}>
+          <div className={styles.circleSmallMobile}>
+            <img src={circleSmall} />
+          </div>
+        </Fade>
+
+        <Fade>
+          <div className={styles.circleBigDesktop}>
+            <img src={circleBigDesktop} />
+          </div>
+        </Fade>
 
         <div className={styles.circleSmallDesktop}>
           <img src={circleSmallDesktop} />
         </div>
 
         <div className={styles.patnerContainer}>
-          <div>
-            <h3 className="text-center text-[#fff] mb-[0.3rem]">Our Patners</h3>
+          <Slide direction="up">
+            <div>
+              <h3 className="text-center text-[#fff] mb-[0.3rem]">
+                Our Patners
+              </h3>
 
-            <div className={styles.partnerImagesContainer}>
-              {patnerImages.map((partnerImage) => (
-                <img src={partnerImage} className={styles.parnerImage} />
-              ))}
+              <div className={styles.partnerImagesContainer}>
+                {patnerImages.map((partnerImage) => (
+                  <img src={partnerImage} className={styles.parnerImage} />
+                ))}
+              </div>
             </div>
-          </div>
+          </Slide>
         </div>
+
         <div className={`${styles.homeContainer}`}>
-          <article className={`${styles.articleOne}`}>
-            <p className={styles.text1}>Welcome to </p>
+          <Slide>
+            <article className={`${styles.articleOne}`}>
+              <p className={styles.text1}>Welcome to </p>
 
-            <h1 className={`${styles.heading}`}>INTERLEDGERSWAP</h1>
+              <h1 className={`${styles.heading}`}>INTERLEDGERSWAP</h1>
 
-            <p className={`${styles.text3}`}>
-              Trade crypto with fastest crypto exchange. Over 700 tradable coins
-              / tokens and over 3000 active pairs.
-            </p>
+              <p className={`${styles.text3}`}>
+                Trade crypto with fastest crypto exchange. Over 700 tradable
+                coins / tokens and over 3000 active pairs.
+              </p>
 
-            <button className={styles.btn}>
-              <img src={arrow} />
-              START NOW
-            </button>
-          </article>
+              <button className={styles.btn}>
+                <img src={arrow} />
+                START NOW
+              </button>
+            </article>
+          </Slide>
 
-          <div className={styles.homeImage}>
-            <img src={Rectangle} />
-          </div>
+          <Slide direction="right">
+            <div className={styles.homeImage}>
+              <img src={Rectangle} />
+            </div>
+          </Slide>
         </div>
       </section>
 
       <section className={styles.formSection}>
         <div className={styles.formContainer}>
           <div className={styles.formContent}>
-            <div>
-              <h1 className={styles.formHeading}>How to make a trade?</h1>
-              <h4 className={styles.formHeading2}>Get a recommended!</h4>
-            </div>
+            <Fade delay={500}>
+              <div>
+                <h1 className={styles.formHeading}>How to make a trade?</h1>
+                <h4 className={styles.formHeading2}>Get a recommended!</h4>
+              </div>
+            </Fade>
 
-            <div className="flex justify-center">
-              <Button>
-                {" "}
-                <img src={arrow} />
-                Click Here
-              </Button>
-            </div>
+            <Slide>
+              <div className="flex justify-center">
+                <Button>
+                  {" "}
+                  <img src={arrow} />
+                  Click Here
+                </Button>
+              </div>
+            </Slide>
           </div>
 
-          <p className={styles.formText}>
-            Discover the power of decentralized exchanges with GuardianSwap.
-            Easily exchange your crypto assets securely by choosing your tokens,
-            specifying the amount, and initiating the swap. Trade with the
-            protection of decentralized technology!
-          </p>
+          <Slide direction="right">
+            <p className={styles.formText}>
+              Discover the power of decentralized exchanges with GuardianSwap.
+              Easily exchange your crypto assets securely by choosing your
+              tokens, specifying the amount, and initiating the swap. Trade with
+              the protection of decentralized technology!
+            </p>
+          </Slide>
 
           <FormComponent />
         </div>
@@ -105,21 +128,28 @@ const Home = () => {
 
       <section className={styles.aboutSection}>
         <div className={styles.aboutContainer}>
-          <h1 className={`${styles.aboutHeading}`}>ABOUT INTERLEDGERSWAP</h1>
+          <Fade delay={500}>
+            <h1 className={`${styles.aboutHeading}`}>ABOUT INTERLEDGERSWAP</h1>
+          </Fade>
 
-          <p className={styles.aboutText}>
-            Easily exchange one cryptocurrency for another with our swap system.
-            Seamlessly trade your digital assets without the need for complex
-            platforms. Select your currencies, enter the amount, and initiate
-            the swap – it’s that straightforward. Start trading today!
-          </p>
+          <Slide>
+            <p className={styles.aboutText}>
+              Easily exchange one cryptocurrency for another with our swap
+              system. Seamlessly trade your digital assets without the need for
+              complex platforms. Select your currencies, enter the amount, and
+              initiate the swap – it’s that straightforward. Start trading
+              today!
+            </p>
+          </Slide>
 
-          <div className="flex center">
-            <Button>
-              <img src={arrow} />
-              Click Here
-            </Button>
-          </div>
+          <Slide direction="right">
+            <div className="flex center">
+              <Button>
+                <img src={arrow} />
+                Click Here
+              </Button>
+            </div>
+          </Slide>
         </div>
       </section>
 
@@ -171,69 +201,83 @@ const Home = () => {
           <img src={google} c />
         </div>
         <div className={styles.testimonialContainer}>
-          <div className={styles.card1}>
-            <img src={Quote} />
-            <p>
-              The exceptional quality of Notta, which I value highly, is its
-              capacity to lessen the strain of taking notes during sales
-              meetings. It really does change the game. Highly suggested.
-            </p>
+          <Bounce>
+            <div className={styles.card1}>
+              <img src={Quote} />
+              <p>
+                The exceptional quality of Notta, which I value highly, is its
+                capacity to lessen the strain of taking notes during sales
+                meetings. It really does change the game. Highly suggested.
+              </p>
 
-            <div className={styles.roundImg}>
-              <img src={roundImg} />
-              <div>
-                <h2>Miss Naomi</h2>
-                <p>Product Designer</p>
+              <div className={styles.roundImg}>
+                <img src={roundImg} />
+                <div>
+                  <h2>Miss Naomi</h2>
+                  <p>Product Designer</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Bounce>
 
-          <div className={styles.card2}>
-            <img src={quote2} />
-            <p>
-              The exceptional quality of Notta, which I value highly, is its
-              capacity to lessen the strain of taking notes during sales
-              meetings. It really does change the game. Highly suggested.
-            </p>
+          <Bounce>
+            <div className={styles.card2}>
+              <img src={quote2} />
+              <p>
+                The exceptional quality of Notta, which I value highly, is its
+                capacity to lessen the strain of taking notes during sales
+                meetings. It really does change the game. Highly suggested.
+              </p>
 
-            <div className={styles.roundImg}>
-              <img src={roundImg} />
-              <div>
-                <h2>Miss Naomi</h2>
-                <p>Product Designer</p>
+              <div className={styles.roundImg}>
+                <img src={roundImg} />
+                <div>
+                  <h2>Miss Naomi</h2>
+                  <p>Product Designer</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Bounce>
 
-          <div className={styles.card3}>
-            <img src={quote3} />
-            <p>
-              The exceptional quality of Notta, which I value highly, is its
-              capacity to lessen the strain of taking notes during sales
-              meetings. It really does change the game. Highly suggested.
-            </p>
+          <Bounce>
+            <div className={styles.card3}>
+              <img src={quote3} />
+              <p>
+                The exceptional quality of Notta, which I value highly, is its
+                capacity to lessen the strain of taking notes during sales
+                meetings. It really does change the game. Highly suggested.
+              </p>
 
-            <div className={styles.roundImg}>
-              <img src={roundImg} />
-              <div>
-                <h2>Miss Naomi</h2>
-                <p>Product Designer</p>
+              <div className={styles.roundImg}>
+                <img src={roundImg} />
+                <div>
+                  <h2>Miss Naomi</h2>
+                  <p>Product Designer</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Bounce>
         </div>
       </section>
 
       <section className={styles.ctaSection}>
         <div className={styles.ctaContainer}>
           <div className={styles.imageSide}>
-            <img src={mac} />
+            <Fade delay={500}>
+              <img src={mac} />
+            </Fade>
           </div>
 
           <div className={styles.titleContainer}>
-            <h1 className={styles.ctaTitle}>Trade Fast, Limitless Exchange</h1>
+            <Slide>
+              <h1 className={styles.ctaTitle}>
+                Trade Fast, Limitless Exchange
+              </h1>
+            </Slide>
 
-            <button className={styles.ctaBtn}>Start Now</button>
+            <Slide direction="up">
+              <button className={styles.ctaBtn}>Start Now</button>
+            </Slide>
           </div>
         </div>
       </section>
