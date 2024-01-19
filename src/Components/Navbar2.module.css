@@ -4,14 +4,12 @@
   top: 0;
   background: #6450e0;
   padding: 0.5rem;
-  z-index: 900;
+  /* z-index: 900; */
 }
 
 .socialLinksContainer {
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
+  background: #6450e0;
   justify-content: center;
 }
 

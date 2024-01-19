@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import NavLinks from "./NavLinks";
-import Button from "./Button";
+
 import { footerSocials } from "../data/data";
 import { logo } from "../assests";
 const Footer = () => {
@@ -15,14 +14,11 @@ const Footer = () => {
           </h2>
         </div>
 
-        <ul className={`${styles.navMenu}`}>
-          <NavLinks />
-          <button className={styles.closeBtn}>button</button>
-        </ul>
+        <ul className={`${styles.navMenu}`}></ul>
 
         <div className={`styles.socialImages flex gap-[0.1rem]`}>
           {footerSocials.map((footerSocial) => (
-            <div>
+            <div key={footerSocial.name}>
               <img src={footerSocial.image} />
             </div>
           ))}

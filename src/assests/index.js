@@ -29,6 +29,8 @@ import coingeko from "./coingeko.svg";
 import coinPedia from "./coinPedia.svg";
 import binance from "./binance.svg";
 import pancakeSwap from "./pancakeSwap.svg";
+import close from "./close.svg";
+import whitepaper from "./whitepaper.pdf";
 
 export {
   logo,
@@ -62,4 +64,6 @@ export {
   coingeko,
   cointMarketCap,
   binance,
+  close,
+  whitepaper,
 };

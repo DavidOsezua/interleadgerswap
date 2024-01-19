@@ -213,10 +213,10 @@ export const cepData = [
 ];
 
 export const footerSocials = [
-  { image: footerLidn },
-  { image: footerx },
-  { image: footerTel },
-  { image: footerDis },
+  { image: footerLidn,name:"lidn"},
+  { image: footerx,name:"x" },
+  { image: footerTel,name:"tel"},
+  { image: footerDis,name:'dis'},
 ];
 
 export const patnerImages = [

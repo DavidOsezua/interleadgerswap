@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import NavLinks from "./NavLinks";
 import { NavLink } from "react-router-dom";
-import { logo, toggle } from "../assests";
+import { logo, toggle, close } from "../assests";
 import Button from "./Button";
+import Dropdown from "./Dropdown";
+import Navbar2 from "./Navbar2";
 
 const Navbar = () => {
   const [toggleButton, setToggleButton] = useState(false);
+  const [dropDown, setDropdown] = useState(false);
 
   const toggleHandler = () => {
     setToggleButton((prev) => !prev);
   };
+
+  const dropDownHandler = () => {
+    setDropdown((prev) => !prev);
+  };
   return (
     <header className={`${styles.header}`}>
+      <div
+        className={`${toggleButton && styles.overlay}`}
+        onClick={toggleHandler}
+      ></div>
+      <Navbar2 />
       <nav className={`${styles.navContainer}`}>
         <div className={styles.logoSection}>
           <NavLink to="/">
@@ -23,16 +34,44 @@ const Navbar = () => {
           </h2>
         </div>
 
-        <ul
-          className={`${styles.navMenu} ${toggleButton ? styles.showMenu : ""}`}
-          onClick={toggleHandler}
-        >
-          <NavLinks onClose={toggleHandler} />
-          <div>
-            <button className={styles.closeBtn}>
-              Close
-            </button>
+        <ul className={`${styles.navMenu} ${toggleButton && styles.showMenu}`}>
+          {/********************* Menu close button *******************/}
+
+          <img
+            src={close}
+            className={styles.closeBtn}
+            onClick={toggleHandler}
+          />
+
+          <button className={styles.mobileBtn}>Start Now</button>
+
+          {/********************* Menu Lists *******************/}
+          <li className={styles.navItems} onClick={toggleHandler}>
+            <NavLink to="/" className={`${styles.link}`}>
+              Home
+            </NavLink>
+          </li>
+
+          <div className="relative cursor-pointer ">
+            <li
+              className={styles.navItems}
+              onClick={dropDownHandler}
+              onMouseEnter={dropDownHandler}
+            >
+              <a className={`${styles.link}`}>Resources</a>
+            </li>
+            {dropDown && <Dropdown />}
           </div>
+
+          <li className={styles.navItems} onClick={toggleHandler}>
+            <a
+              href="https://videos.files.wordpress.com/o0s7TlDp/interledgerswap-xls-project-1.mp4"
+              target="blank"
+              className={`${styles.link}`}
+            >
+              About Us
+            </a>
+          </li>
         </ul>
 
         <div className={styles.toggleBtn}>

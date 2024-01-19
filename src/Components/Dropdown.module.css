@@ -1,0 +1,39 @@
+.container {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  min-width: 8rem;
+  color: #0d2c7b;
+}
+
+.container > * + * {
+  margin-top: 0.7rem;
+}
+
+.link {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.link:hover::before {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: #0d2c7b;
+}
+@media screen and (min-width: 913px) {
+  .container {
+    position: absolute;
+    border-radius: 0.1875rem;
+    background: #6450e0;
+    box-shadow: 0px 4px 4px 0px rgba(13, 44, 123, 0.15);
+    color: #fff;
+    padding: 1rem;
+    margin-top: 1.3rem;
+  }
+
+  .link:hover::before {
+    background: #ffffff;
+  }
+}
