@@ -16,7 +16,7 @@
 .navItems {
   position: relative;
 }
-.navItems :global(.active)::before {
+.link :global(.active)::before {
   position: absolute;
   bottom: 0;
   width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FormComponent.module.css";
 import FormField from "./FormField";
+import { arrow } from "../assests";
 
 const FormComponent = () => {
   return (
@@ -21,7 +22,12 @@ const FormComponent = () => {
             <span>1 BTC = 45762.89 USDT</span>
           </div>
           <button className="mx-auto" aria-label="Switch crypto">
-              <img src="/switch-arrow.png" aria-hidden="true" width={20} height={20}/>
+            <img
+              src="/switch-arrow.png"
+              aria-hidden="true"
+              width={20}
+              height={20}
+            />
           </button>
         </div>
 
@@ -33,9 +39,7 @@ const FormComponent = () => {
         />
 
         {/* exchange button */}
-        <button className={styles['form-button']}>
-          Exchange
-        </button>
+        <button className={styles["form-button"]}>Exchange</button>
       </div>
     </form>
   );

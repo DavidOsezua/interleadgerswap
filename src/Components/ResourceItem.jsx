@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ResourceItem.module.css";
+import parse from "html-react-parser";
 
 const ResourceItem = ({ num, curr, onOpen, resource, plus }) => {
   const isOpen = num === curr;
@@ -21,14 +22,18 @@ const ResourceItem = ({ num, curr, onOpen, resource, plus }) => {
   }, []);
 
   return (
-    <div className={`${styles.container} `}>
-      <div className={`${styles.titleContent}`}>
+    <div className={`${styles.container} `} onClick={openHandler}>
+      <div
+        className={`${styles.titleContent} ${
+          isOpen && styles.titleContentRemove
+        }`}
+      >
         <h4 className={`${styles.title}`}>{resource.questions}</h4>
         <img src={plus} className={`cursor-pointer`} onClick={openHandler} />
       </div>
 
       <div className={`${styles.text} ${isOpen && styles.showText}`}>
-        {resource.answers}
+        <p> {parse(resource.answers)}</p>
       </div>
     </div>
   );
