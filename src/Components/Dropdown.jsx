@@ -3,11 +3,11 @@ import styles from "./Dropdown.module.css";
 import { NavLink } from "react-router-dom";
 import { whitepaper } from "../assests";
 
-const Dropdown = () => {
+const Dropdown = ({ onClose }) => {
   return (
-    <ul className={styles.container}>
-      <li>
-        <NavLink to="aboutus" className={styles.link}>
+    <ul className={styles.container} onClick={onClose}>
+      <li >
+        <NavLink to="/termofuse" className={styles.link}>
           Terms of Use
         </NavLink>
       </li>
@@ -17,7 +17,7 @@ const Dropdown = () => {
         </a>
       </li>
       <li>
-        <NavLink to="/resources" className={styles.link}>
+        <NavLink to="/faqs" className={styles.link} >
           FAQS
         </NavLink>
       </li>

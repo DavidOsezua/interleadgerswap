@@ -60,7 +60,7 @@ const Navbar = () => {
             >
               <a className={`${styles.link}`}>Resources</a>
             </li>
-            {dropDown && <Dropdown />}
+            {dropDown && <Dropdown onClose={toggleHandler} />}
           </div>
 
           <li className={styles.navItems} onClick={toggleHandler}>
