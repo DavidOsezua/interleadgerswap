@@ -124,6 +124,7 @@
 
 .navItems {
   position: relative;
+  cursor: pointer;
 }
 .navItems :global(.active)::before {
   position: absolute;
