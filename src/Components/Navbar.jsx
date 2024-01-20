@@ -52,7 +52,7 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li className={styles.navItems} onMouseEnter={dropDownHandler}>
+          <li className={styles.items} onMouseEnter={dropDownHandler}>
             <a className={`${styles.link}`} onClick={dropDownHandler}>
               Resources
             </a>
