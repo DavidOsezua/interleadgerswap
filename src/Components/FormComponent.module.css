@@ -43,10 +43,12 @@
   border-top: 1px solid rgba(35, 98, 245, 0.15);
   border-left: 1px solid rgba(35, 98, 245, 0.15);
   border-bottom: 1px solid rgba(35, 98, 245, 0.15);
-
-  color: #001039;
+  border-radius: 0.1875rem;
+  border: 1px solid rgba(100, 80, 224, 0.6);
+  background: #2362f526;
   font-size: 1rem;
   font-weight: 500;
+  outline: none;
   font-style: normal;
 }
 
@@ -67,6 +69,9 @@
   font-size: 1rem;
   color: #001039;
   font-weight: 400;
+  outline: none;
+  border: 1px solid rgba(100, 80, 224, 0.6);
+  background: #2362f526;
 }
 
 .form-conversion-detail {
@@ -80,15 +85,16 @@
   width: fit-content;
 }
 
-.form-button {
+.formButton {
   display: block;
   width: 100%;
   padding-block: 0.5rem;
   margin-top: auto;
   text-align: center;
-  background-color: #6450e0;
+  background: #6450e0;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   border-radius: 0.1875rem;
 }
+

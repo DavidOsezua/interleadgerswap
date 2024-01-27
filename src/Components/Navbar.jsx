@@ -52,10 +52,14 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li className={styles.items} onMouseEnter={dropDownHandler}>
-            <a className={`${styles.link}`} onClick={dropDownHandler}>
+          <li className={styles.navItems}>
+            <p
+              className={`${styles.link} cursor-pointer inline`}
+              onClick={dropDownHandler}
+              onMouseEnter={dropDownHandler}
+            >
               Resources
-            </a>
+            </p>
           </li>
           {dropDown && <Dropdown onClose={toggleHandler} />}
 

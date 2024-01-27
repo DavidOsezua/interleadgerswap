@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.css";
 
 import {
@@ -22,24 +22,31 @@ import Button from "../Components/Button";
 import { FormComponent, SectionComponent } from "../Components";
 import { patnerImages } from "../data/data";
 import { Slide, Fade, Bounce } from "react-awesome-reveal";
+import FormModal from "../Components/FormModal";
 
 const Home = () => {
+  const [modal, setModal] = useState(false);
+
+  const modalHandler = () => {
+    setModal((prev) => !prev);
+  };
   return (
     <>
+      {modal && <FormModal modalHandler={modalHandler} />}
       <section className={`${styles.homeSection}`}>
-        <Fade delay={1000}>
+        <Fade delay={1000} triggerOnce>
           <div className={styles.circleBigMobile}>
             <img src={circleBig} />
           </div>
         </Fade>
 
-        <Fade delay={1500}>
+        <Fade delay={1500} triggerOnce>
           <div className={styles.circleSmallMobile}>
             <img src={circleSmall} />
           </div>
         </Fade>
 
-        <Fade>
+        <Fade triggerOnce>
           <div className={styles.circleBigDesktop}>
             <img src={circleBigDesktop} />
           </div>
@@ -50,15 +57,19 @@ const Home = () => {
         </div>
 
         <div className={styles.patnerContainer}>
-          <Slide direction="up">
+          <Slide direction="up" triggerOnce>
             <div>
               <h3 className="text-center text-[#fff] mb-[0.3rem]">
                 Our Patners
               </h3>
 
               <div className={styles.partnerImagesContainer}>
-                {patnerImages.map((partnerImage) => (
-                  <img src={partnerImage} className={styles.parnerImage} />
+                {patnerImages.map((partnerImage, i) => (
+                  <img
+                    src={partnerImage}
+                    className={styles.parnerImage}
+                    key={i}
+                  />
                 ))}
               </div>
             </div>
@@ -66,7 +77,7 @@ const Home = () => {
         </div>
 
         <div className={`${styles.homeContainer}`}>
-          <Slide>
+          <Slide triggerOnce>
             <article className={`${styles.articleOne}`}>
               <p className={styles.text1}>Welcome to </p>
 
@@ -84,7 +95,7 @@ const Home = () => {
             </article>
           </Slide>
 
-          <Slide direction="right">
+          <Slide direction="right" triggerOnce>
             <div className={styles.homeImage}>
               <img src={Rectangle} />
             </div>
@@ -95,14 +106,14 @@ const Home = () => {
       <section className={styles.formSection}>
         <div className={styles.formContainer}>
           <div className={styles.formContent}>
-            <Fade delay={500}>
+            <Fade delay={500} triggerOnce>
               <div>
                 <h1 className={styles.formHeading}>How to make a trade?</h1>
                 <h4 className={styles.formHeading2}>Get a recommended!</h4>
               </div>
             </Fade>
 
-            <Slide>
+            <Slide triggerOnce>
               <div className="flex justify-center">
                 <Button>
                   {" "}
@@ -113,7 +124,7 @@ const Home = () => {
             </Slide>
           </div>
 
-          <Slide direction="right">
+          <Slide direction="right" triggerOnce>
             <p className={styles.formText}>
               Discover the power of decentralized exchanges with GuardianSwap.
               Easily exchange your crypto assets securely by choosing your
@@ -122,17 +133,17 @@ const Home = () => {
             </p>
           </Slide>
 
-          <FormComponent />
+          <FormComponent modalHandler={modalHandler} />
         </div>
       </section>
 
       <section className={styles.aboutSection}>
         <div className={styles.aboutContainer}>
-          <Fade delay={500}>
+          <Fade delay={500} triggerOnce>
             <h1 className={`${styles.aboutHeading}`}>ABOUT INTERLEDGERSWAP</h1>
           </Fade>
 
-          <Slide>
+          <Slide triggerOnce>
             <p className={styles.aboutText}>
               Easily exchange one cryptocurrency for another with our swap
               system. Seamlessly trade your digital assets without the need for
@@ -142,7 +153,7 @@ const Home = () => {
             </p>
           </Slide>
 
-          <Slide direction="right">
+          <Slide direction="right" triggerOnce>
             <div className="flex center">
               <Button>
                 <img src={arrow} />
@@ -201,7 +212,7 @@ const Home = () => {
           <img src={google} c />
         </div>
         <div className={styles.testimonialContainer}>
-          <Bounce>
+          <Bounce triggerOnce>
             <div className={styles.card1}>
               <img src={Quote} />
               <p>
@@ -220,7 +231,7 @@ const Home = () => {
             </div>
           </Bounce>
 
-          <Bounce>
+          <Bounce triggerOnce>
             <div className={styles.card2}>
               <img src={quote2} />
               <p>
@@ -239,7 +250,7 @@ const Home = () => {
             </div>
           </Bounce>
 
-          <Bounce>
+          <Bounce triggerOnce>
             <div className={styles.card3}>
               <img src={quote3} />
               <p>
@@ -263,19 +274,19 @@ const Home = () => {
       <section className={styles.ctaSection}>
         <div className={styles.ctaContainer}>
           <div className={styles.imageSide}>
-            <Fade delay={500}>
+            <Fade delay={500} triggerOnce>
               <img src={mac} />
             </Fade>
           </div>
 
           <div className={styles.titleContainer}>
-            <Slide>
+            <Slide triggerOnce>
               <h1 className={styles.ctaTitle}>
                 Trade Fast, Limitless Exchange
               </h1>
             </Slide>
 
-            <Slide direction="up">
+            <Slide direction="up" triggerOnce>
               <button className={styles.ctaBtn}>Start Now</button>
             </Slide>
           </div>

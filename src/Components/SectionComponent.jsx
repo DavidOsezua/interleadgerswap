@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import Button from "./Button";
 import { arrow } from "../assests";
@@ -19,7 +20,7 @@ const SectionComponent = ({
   return (
     <div className={styles.split}>
       <div className={`${imageSide ? styles.imageSide : ""} ${styles.image}`}>
-        <Fade delay={1000}>
+        <Fade delay={1000} triggerOnce>
           <img src={image} />
         </Fade>
       </div>
@@ -30,34 +31,34 @@ const SectionComponent = ({
         } `}
       >
         <div className={``}>
-          <Slide  direction="down">
+          <Slide direction="down" triggerOnce>
             <h1 className={styles.heading}>{heading1} </h1>
           </Slide>
-          <Fade delay={300}>
+          <Fade delay={300} triggerOnce>
             <p className={styles.text}>{text1}</p>
           </Fade>
         </div>
 
         <div>
-          <Slide direction="down">
+          <Slide direction="down" triggerOnce>
             <h1 className={styles.heading}>{heading2} </h1>
           </Slide>
-          <Fade delay={300}>
+          <Fade delay={300} triggerOnce>
             <p className={styles.text}>{text2}</p>
           </Fade>
         </div>
 
         <div>
-          <Slide direction="down">
+          <Slide direction="down" triggerOnce>
             <h1 className={styles.heading}>{heading3} </h1>
           </Slide>
-          <Fade delay={300}>
+          <Fade delay={300} triggerOnce>
             <p className={styles.text}>{text3}</p>
           </Fade>
         </div>
 
         <div>{images}</div>
-        <Slide delay={500} direction="up">
+        <Slide delay={500} direction="up" triggerOnce>
           <Button>
             <img src={arrow} /> Start Now
           </Button>

@@ -31,6 +31,10 @@ import binance from "./binance.svg";
 import pancakeSwap from "./pancakeSwap.svg";
 import close from "./close.svg";
 import whitepaper from "./whitepaper.pdf";
+import formClose from "./formClose.svg";
+import lineArrow from "./lineArrow.svg";
+import bitcoin from "./bitcoin.svg";
+import usd from "./usd.svg";
 
 export {
   logo,
@@ -66,4 +70,8 @@ export {
   binance,
   close,
   whitepaper,
+  formClose,
+  lineArrow,
+  usd,
+  bitcoin,
 };

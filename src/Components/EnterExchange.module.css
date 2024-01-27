@@ -1,0 +1,53 @@
+.formField {
+  margin-top: 5rem;
+}
+
+.formField > * + * {
+  margin-top: 2rem;
+}
+
+.formFieldContainer > * + * {
+  margin-top: 2rem;
+}
+
+.recipient {
+  color: #001039;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.formInput {
+  padding-left: 0.6875rem;
+  padding-top: 14px;
+  padding-bottom: 6px;
+  width: 100%;
+  border-top-left-radius: 0.1875rem;
+  border-bottom-left-radius: 0.1875rem;
+  border-top: 1px solid rgba(35, 98, 245, 0.15);
+  border-left: 1px solid rgba(35, 98, 245, 0.15);
+  border-bottom: 1px solid rgba(35, 98, 245, 0.15);
+  border-radius: 0.1875rem;
+  border: 1px solid rgba(100, 80, 224, 0.6);
+  background: #2362f526;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  font-style: normal;
+}
+
+@media screen and (min-width: 968px) {
+  .formField {
+    margin-top: 0rem;
+  }
+  .formFieldContainer > * + * {
+    margin-top: 0rem;
+  }
+  .formFieldContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
