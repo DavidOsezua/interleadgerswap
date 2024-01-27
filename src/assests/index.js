@@ -35,6 +35,8 @@ import formClose from "./formClose.svg";
 import lineArrow from "./lineArrow.svg";
 import bitcoin from "./bitcoin.svg";
 import usd from "./usd.svg";
+import second from "./second.mp4";
+import first from "./first.mp4";
 
 export {
   logo,
@@ -74,4 +76,6 @@ export {
   lineArrow,
   usd,
   bitcoin,
+  second,
+  first,
 };

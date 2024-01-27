@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import styles from "./FormComponent.module.css";
-import { arrow } from "../assests";
+import { arrow, bitcoin } from "../assests";
 
 const FormField = ({ label, labelId, selectName }) => {
   return (
@@ -12,8 +12,7 @@ const FormField = ({ label, labelId, selectName }) => {
       <input id={labelId} className={styles["form-input"]} />
       <select name={selectName} className={styles["form-select"]}>
         <option value="1">
-          <img src={arrow} />
-          <span> BTC</span>
+          <p> BTC </p>
         </option>
         <option value="2">USDT</option>
       </select>

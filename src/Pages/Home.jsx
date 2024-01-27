@@ -17,6 +17,7 @@ import {
   mac,
   ComImg3,
   comImg,
+  second,
 } from "../assests";
 import Button from "../Components/Button";
 import { FormComponent, SectionComponent } from "../Components";
@@ -97,7 +98,9 @@ const Home = () => {
 
           <Slide direction="right" triggerOnce>
             <div className={styles.homeImage}>
-              <img src={Rectangle} />
+              <video autoPlay muted loop controls>
+                <source src={second} type="video/mp4" />
+              </video>
             </div>
           </Slide>
         </div>

@@ -27,7 +27,7 @@ const SectionComponent = ({
 
       <div
         className={`${styles.splitContainer} ${
-          center === true ? styles.textCenter : " "
+          center  ? styles.textCenter : " "
         } `}
       >
         <div className={``}>
