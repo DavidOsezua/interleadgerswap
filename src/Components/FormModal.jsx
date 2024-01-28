@@ -6,13 +6,17 @@ import useMultistepForm from "../customHooks/useMultistepForm";
 import EnterExchange from "./EnterExchange";
 import ConfirmExcahnge from "./ConfirmExcahnge";
 import CompleteExchange from "./CompleteExchange";
+import Progressbar from "./Progressbar";
 
 const FormModal = ({ modalHandler }) => {
-  const { currentStep, next, step } = useMultistepForm([
-    <EnterExchange key={0} />,
-    <ConfirmExcahnge key={1} />,
-    <CompleteExchange key={2} />,
-  ]);
+  const { steps, currentStep, next, step, stepNames } = useMultistepForm(
+    [
+      <EnterExchange key={0} />,
+      <ConfirmExcahnge key={1} />,
+      <CompleteExchange key={2} />,
+    ],
+    ["Enter exchange details", "Confirm exchange details", "Complete exchange"]
+  );
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -43,7 +47,13 @@ const FormModal = ({ modalHandler }) => {
               </div>
             </div>
 
-            <div>Progress bar</div>
+            <div>
+              <Progressbar
+                progress={steps.length}
+                currentProgress={currentStep}
+                stepNames={stepNames}
+              />
+            </div>
 
             {step}
 

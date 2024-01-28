@@ -98,7 +98,7 @@ const Home = () => {
 
           <Slide direction="right" triggerOnce>
             <div className={styles.homeImage}>
-              <video autoPlay muted loop controls>
+              <video autoPlay muted loop controls width="784px">
                 <source src={second} type="video/mp4" />
               </video>
             </div>

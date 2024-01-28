@@ -33,7 +33,7 @@
 
 .hr {
   background: rgba(13, 44, 123);
-  max-width: 300px;
+  max-width: 80%;
   margin: 0 auto;
   height: 0.0625rem;
   margin-bottom: 1rem;
@@ -90,9 +90,5 @@
 
   .navMenu > * + * {
     margin-left: 2rem;
-  }
-
-  .hr {
-    max-width: 900px;
   }
 }

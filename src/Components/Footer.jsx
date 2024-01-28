@@ -27,7 +27,7 @@ const Footer = () => {
 
       <div className={styles.hr}></div>
 
-      <p className="text-center pb-[1rem]">Copyright © 2024 INTERLEDGERSWAP</p>
+      <p className="text-center pb-[2rem] text-[#0D2C7B] font-[500]">Copyright © 2024 INTERLEDGERSWAP</p>
     </footer>
   );
 };
