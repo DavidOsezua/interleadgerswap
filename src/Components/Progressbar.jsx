@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { TiTick } from "react-icons/ti";
-import "./ProgressBar.css";
+import "./Progressbar.css";
 
 const ProgressBar = ({ progress, currentProgress, stepNames }) => {
   const renderSteps = () => {
