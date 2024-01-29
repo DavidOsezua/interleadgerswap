@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import { logo, toggle, close } from "../assests";
+import { logo, toggle, close, caret } from "../assests";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
 import Navbar2 from "./Navbar2";
@@ -16,6 +16,9 @@ const Navbar = () => {
 
   const dropDownHandler = () => {
     setDropdown((prev) => !prev);
+  };
+  const dropDownHandlerLeave = () => {
+    setDropdown(false);
   };
   return (
     <header className={`${styles.header}`}>
@@ -52,16 +55,25 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li className={styles.navItems}>
+          <li className={`${styles.navItems} flex gap-1`}>
             <p
               className={`${styles.link} cursor-pointer inline`}
               onClick={dropDownHandler}
-              onMouseEnter={dropDownHandler}
+              // onMouseEnter={dropDownHandler}
             >
               Resources
             </p>
+            <img
+              src={caret}
+              className={`w-[13px] mt-1 ${
+                dropDown ? "-rotate-180 transition-all" : "transition-all"
+              }`}
+              onClick={dropDownHandler}
+            />
           </li>
-          {dropDown && <Dropdown onClose={toggleHandler} />}
+          {dropDown && (
+            <Dropdown onClose={toggleHandler} dropDownClose={dropDownHandler} />
+          )}
 
           <li className={styles.navItems} onClick={toggleHandler}>
             <a

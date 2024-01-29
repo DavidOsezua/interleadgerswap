@@ -45,7 +45,7 @@
   border-bottom: 1px solid rgba(35, 98, 245, 0.15);
   border-radius: 0.1875rem;
   border: 1px solid rgba(100, 80, 224, 0.6);
-  background: #2362f526;
+  background: #e6eaf1;
   font-size: 1rem;
   font-weight: 500;
   outline: none;
@@ -71,7 +71,8 @@
   font-weight: 400;
   outline: none;
   border: 1px solid rgba(100, 80, 224, 0.6);
-  background: #2362f526;
+    background: #e6eaf1;
+
 }
 
 .form-conversion-detail {
@@ -97,4 +98,3 @@
   color: #ffffff;
   border-radius: 0.1875rem;
 }
-

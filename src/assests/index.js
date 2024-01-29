@@ -37,6 +37,7 @@ import bitcoin from "./bitcoin.svg";
 import usd from "./usd.svg";
 import second from "./second.mp4";
 import first from "./first.mp4";
+import caret from "./caret.svg"
 
 export {
   logo,
@@ -78,4 +79,5 @@ export {
   bitcoin,
   second,
   first,
+  caret
 };

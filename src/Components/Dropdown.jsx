@@ -5,8 +5,8 @@ import { whitepaper } from "../assests";
 
 const Dropdown = ({ onClose }) => {
   return (
-    <ul className={styles.container} onClick={onClose}>
-      <li >
+    <ul className={styles.container}>
+      <li onClick={onClose}>
         <NavLink to="/termofuse" className={styles.link}>
           Terms of Use
         </NavLink>
@@ -16,8 +16,8 @@ const Dropdown = ({ onClose }) => {
           Whitepaper
         </a>
       </li>
-      <li>
-        <NavLink to="/faqs" className={styles.link} >
+      <li onClick={onClose}>
+        <NavLink to="/faqs" className={styles.link}>
           FAQS
         </NavLink>
       </li>
