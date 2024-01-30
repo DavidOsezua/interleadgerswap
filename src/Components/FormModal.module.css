@@ -61,7 +61,10 @@
   font-weight: 500;
   color: #ffffff;
 }
-
+ .btnFaint{
+    background: #7983dc;
+    opacity: 0.2;
+ }
 .formHeader {
   display: inline-flex;
   width: 100%;

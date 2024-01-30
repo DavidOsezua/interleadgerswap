@@ -1,9 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState } from "react";
 import FormField from "./FormField";
 import styles from "./EnterExchange.module.css";
+// import useClipboardPaste from "../customHooks/useClipboardPaste";
+import { paste } from "../assests";
 
-const EnterExchange = () => {
+const EnterExchange = ({ pastedText, pasteFromClipboard, clipText,onInputState }) => {
+  // const [address, setAddress] = useState()
+  const inputValue = clipText !== "" ? clipText : pastedText;
+
+  onInputState(inputValue);
+
   return (
     <div className={`${styles.formField} w-full`}>
       {/******************** FORM FILED CONTAINER  ***************/}
@@ -41,8 +48,20 @@ const EnterExchange = () => {
         <p className="mb-[0.3rem] text-[0.75rem] text-[#001039]">
           Receipient Wallet
         </p>
-        <div className={`${styles.pasteAdress}`}>
-          <input className={`${styles.formInput}`} />
+        <div className={`${styles.pasteAddress}`}>
+          <input
+            className={`${styles.formInput}`}
+            placeholder="Enter BTC payout wallet"
+            value={inputValue}
+            onChange={(e) => onPastedTextChange(e.target.value)}
+          />
+          <button
+            className={`${styles.inputBtn}`}
+            type="button"
+            onClick={pasteFromClipboard}
+          >
+            Paste <img src={paste} />
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useState } from "react";
 import styles from "./FormModal.module.css";
 import { formClose, arrow } from "../assests";
 import useMultistepForm from "../customHooks/useMultistepForm";
@@ -7,11 +7,30 @@ import EnterExchange from "./EnterExchange";
 import ConfirmExcahnge from "./ConfirmExcahnge";
 import CompleteExchange from "./CompleteExchange";
 import Progressbar from "./Progressbar";
+import useClipboardPaste from "../customHooks/useClipboardPaste";
 
 const FormModal = ({ modalHandler }) => {
+  const [clipText, setClipText] = useState("");
+  const handleClipText = (text) => {
+    setClipText(text);
+  };
+  const [inputState, setInputState] = useState("");
+
+  const inputStateHandler = (text) => {
+    setInputState(text);
+  };
+  const [pastedText, pasteFromClipboard] = useClipboardPaste();
+
   const { steps, currentStep, next, step, stepNames } = useMultistepForm(
     [
-      <EnterExchange key={0} />,
+      <EnterExchange
+        key={0}
+        pastedText={pastedText}
+        pasteFromClipboard={pasteFromClipboard}
+        onPastedTextChange={handleClipText}
+        onInputState={inputStateHandler}
+        clipText={clipText}
+      />,
       <ConfirmExcahnge key={1} />,
       <CompleteExchange key={2} />,
     ],
@@ -57,7 +76,10 @@ const FormModal = ({ modalHandler }) => {
 
             {step}
 
-            <button className={`${styles.formButton} cursor-pointer`}>
+            <button
+              className={`${styles.formButton} ${!inputState ? styles.btnFaint : ""} cursor-pointer`}
+              disabled={!inputState}
+            >
               Next
               <img src={arrow} />
             </button>
